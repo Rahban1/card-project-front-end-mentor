@@ -1,0 +1,157 @@
+:root{
+    --Darkcyan: hsl(185, 75%, 39%);
+    --Verydarkdesaturatedblue: hsl(229, 23%, 23%);
+    --Darkgrayishblue: hsl(227, 10%, 46%);
+    --Darkgray: hsl(0, 0%, 59%);
+}
+
+
+/* ---------------- */
+/* ------Reset----- */
+/* ---------------- */
+
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+
+
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/* --------------------- */
+/* ------components----- */
+/* --------------------- */
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body{
+    background-color:var(--Darkcyan);
+    font-family: 'Kumbh Sans', sans-serif;
+    background-image: url(./images/bg-pattern-top.svg),url(./images/bg-pattern-bottom.svg);
+    background-position: left top, right bottom;
+    background-repeat: no-repeat, no-repeat;
+    background-size:  50% 60%;
+}
+
+.card{
+    width: 55vh;
+    height: 55vh;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: .5rem;
+    
+
+}
+
+.card-pattern{
+    width: 55vh;
+    border-radius: .5rem .5rem 0 0 ;
+    
+}
+.whitecircle{
+    background-color: white;
+    width: 15vh;
+    height: 15vh;
+    border-radius: 50%;
+    position: absolute;
+    top: 27%;
+    left: 37%;
+    
+   
+}
+
+.main-image{
+    width: 14vh;
+    height: 14vh;
+    border-radius: 50%;
+}
+
+.title{
+    margin-top: 7vh ;
+    text-align: center;
+    color: var(--Verydarkdesaturatedblue);
+}
+
+h3{
+    font-size: 18px;
+}
+
+p{
+    color: var(--Darkgray);
+    font-size: 12px;
+}
+
+.city{
+    color: var(--Darkgray);
+    text-align: center;
+
+}
+
+.bottom{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-top: 20px;
+    margin-inline: 3px;
+
+}
